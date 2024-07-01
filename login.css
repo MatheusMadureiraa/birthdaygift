@@ -63,6 +63,7 @@ form{
     padding: 25px 35px 25px 35px;
     animation: showform 8s forwards;
     backdrop-filter: blur(7px); /* desfoque de fundo */
+    -webkit-backdrop-filter: blur(7px); /* desfoque de fundo para navegadores webkit */
     border-radius: 15%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
