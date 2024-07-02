@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const participantList = document.getElementById('participant-list');
     const participants = Array.from(participantList.getElementsByClassName('participant'));
 
-    // Ordena participantes em ordem alfabética
+    // participantes em ordem alfabética
     participants.sort(function(a, b) {
         return a.querySelector('.name').textContent.localeCompare(b.querySelector('.name').textContent);
     });
@@ -15,11 +15,23 @@ document.addEventListener('DOMContentLoaded', function() {
 
     participantList.classList.add('visible');
 
-    // Adiciona a classe "visible" para cada participante com um pequeno atraso
+    // "visible" para cada participante com um pequeno atraso
     participants.forEach((participant, index) => {
         setTimeout(() => {
             participant.classList.add('visible');
-        }, index * 250); // Atraso para cada participante
+        }, index * 250); // para cada participante
+    });
+
+    // abrir vídeo ao clicar no participante
+    participants.forEach(participant => {
+        participant.addEventListener('click', function() {
+            const videoUrl = this.getAttribute('data-video');
+            if (videoUrl) {
+                window.open(videoUrl, '_blank');
+            } else {
+                console.error('Video URL not found!');
+            }
+        });
     });
 });
 
