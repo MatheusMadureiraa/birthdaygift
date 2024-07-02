@@ -1,0 +1,88 @@
+body, html {
+    width: 100%;
+    height: 100%;
+    background-color: #FAF4E0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+#page-one-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+#page-one {
+    width: 100%;
+    animation: showpage 3s ease-in-out;
+    display:block;
+}
+
+@keyframes showpage {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+#page-two {
+    width: 100%;
+    animation: showpagetwo 3s ease-in-out;
+    display: none;
+}
+
+@keyframes showpagetwo {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+#page-tree {
+    width: 100%;
+    animation: showpagetree 3s ease-in-out;
+    display: none;
+}
+
+@keyframes showpagetree {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+#next-page-button {
+    height: 50px;
+    position: absolute;
+    bottom: 20px; 
+    right: 20px; 
+    animation: showbutton 2s ease-in;
+    z-index: 2;
+}
+
+#next-page-button:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+@keyframes showbutton {
+    0%, 50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
