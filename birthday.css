@@ -29,7 +29,8 @@ body {
 }
 
 .play-button {
-    font-size: 0.6em;
+    width: 8px;
+    height: 8px;
     margin-left: 93%;
     width: 4%;
     display: flex;
